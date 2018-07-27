@@ -19,23 +19,7 @@ def score(dice, category):
     return category(dice)
     
 def YACHT(dice):
-    print((dice.pop()))
-    dice = iter(dice)
-    try:
-        first = next(dice)
-    except StopIteration:
-        return True
-    #print(all(first == rest for rest in dice)) ## DEBUG
-    if all(first == rest for rest in dice):
-        return 50
-    else:
-        return 0
+    return 0
 
 if __name__ == "__main__":
     print(score([5,5,5,5,5],YACHT))
-    print(score([5,5,5,5,4],YACHT))
-    score([5,2,4,1,4],YACHT)
-    score([5,1,3,1,4],YACHT)
-    score([5,1,4,4,4],YACHT)
-    score([5,1,4,1,4],YACHT)
-    score([5,1,4,1,4],YACHT)
